@@ -12,10 +12,16 @@ class Book:
         )  # Ensures genre is always a list
         self.status = status
 
-    def marked_as_unread(self):
+    def mark_as_finished(self):
         # marks book as unread
         self.status = "Finished"
 
+    def mark_as_to_be_read(self):
+        self.status = "To Be Read"
+
+    def mark_as_dnf(self):
+        self.status = "Did Not Finished"
+
     def __str__(self):
-        status = "Book has been read" if self.read else "Book has not been read"
-        return f"{self.title} by {self.author} Its a:{self.genre} Status: [{status}]"
+        status = f"Status [{self.status}]"
+        return f"{self.title} by {self.author} Its a:{self.genre} {status}"
