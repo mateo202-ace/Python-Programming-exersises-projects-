@@ -141,4 +141,11 @@ class Library:
 
         return ("\n".join(str(book) for book in books) if books else "No books in the DNF list.")
 
-
+    def switch_lib(self, file_name):
+        if file_name in ["books.csv", "dnf_books.csv"]:
+            self.csv_file = file_name
+            self.books = self.load_books()
+            self.name = file_name.split(".")[0].capitalize()
+            return f"Library switched to: {self.name}"
+        else:
+            return "Invalid library. Only 'books.csv' and 'dnf_books.csv' are supported"

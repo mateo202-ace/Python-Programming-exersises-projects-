@@ -1,13 +1,11 @@
+import tkinter as tk
+from gui import LibraryApp
+
 from models.book import Book
 from models.library import Library
 
+if __name__ == "__main__": 
+    root = tk.Tk()
+    app = LibraryApp(root)
+    root.mainloop()
 
-
-# Create library and loas books
-my_library = Library("Andreas Library")
-
-
-
-
-print("Updated DNF Library")
-print(my_library.list_dnf_list())
