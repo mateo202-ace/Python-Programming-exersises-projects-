@@ -1,6 +1,7 @@
-from fastapi import FastAPI
-from database import init_db
-
+from fastapi import FastAPI, Depends, HTTPException
+from sqlalchemy.orm import Session
+from database import init_db, SessionLocal, User
+from pydantic import BaseModel
 
 app = FastAPI()
 
