@@ -1,0 +1,20 @@
+May 09 07:57:13 ubuntu-server sshd[12347]: Connection closed by 192.168.1.102 port 22
+May 09 13:47:55 ubuntu-server sshd[12345]: Accepted password for user1 from 192.168.1.100 port 22 ssh2
+May 09 15:04:22 ubuntu-server sshd[12345]: Accepted password for user1 from 192.168.1.100 port 22 ssh2
+May 09 09:01:32 ubuntu-server sshd[12347]: Connection closed by 192.168.1.102 port 22
+May 09 03:13:30 ubuntu-server sudo:     user2 : TTY=pts/0 ; PWD=/home/user2 ; USER=root ; COMMAND=/bin/ls
+May 09 07:33:54 ubuntu-server sudo:     user2 : TTY=pts/0 ; PWD=/home/user2 ; USER=root ; COMMAND=/bin/ls
+May 09 02:32:53 ubuntu-server sshd[12345]: Accepted password for user1 from 192.168.1.100 port 22 ssh2
+May 08 21:32:20 ubuntu-server sshd[12346]: Failed password for invalid user admin7 from 192.168.1.107 port 22 ssh2
+May 08 21:17:13 ubuntu-server sudo:     user2 : TTY=pts/0 ; PWD=/home/user2 ; USER=root ; COMMAND=/bin/ls
+May 08 17:59:21 ubuntu-server sudo:     user2 : TTY=pts/0 ; PWD=/home/user2 ; USER=root ; COMMAND=/bin/ls
+May 09 04:13:12 ubuntu-server sshd[12347]: Connection closed by 192.168.1.102 port 22
+May 09 17:14:34 ubuntu-server sshd[12347]: Connection closed by 192.168.1.102 port 22
+May 09 06:56:22 ubuntu-server sshd[12346]: Failed password for invalid user admin4 from 192.168.1.104 port 22 ssh2
+May 08 14:53:39 ubuntu-server sudo:     user2 : TTY=pts/0 ; PWD=/home/user2 ; USER=root ; COMMAND=/bin/ls
+May 09 09:02:39 ubuntu-server sshd[12345]: Accepted password for user1 from 192.168.1.100 port 22 ssh2
+May 09 00:49:39 ubuntu-server sudo:     user2 : TTY=pts/0 ; PWD=/home/user2 ; USER=root ; COMMAND=/bin/ls
+May 08 20:48:06 ubuntu-server sudo:     user2 : TTY=pts/0 ; PWD=/home/user2 ; USER=root ; COMMAND=/bin/ls
+May 09 05:08:58 ubuntu-server sshd[12345]: Accepted password for user1 from 192.168.1.100 port 22 ssh2
+May 09 10:02:54 ubuntu-server sshd[12346]: Failed password for invalid user admin1 from 192.168.1.101 port 22 ssh2
+May 09 13:15:16 ubuntu-server sshd[12346]: Failed password for invalid user admin7 from 192.168.1.107 port 22 ssh2

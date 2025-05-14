@@ -7,7 +7,7 @@ from pathlib import Path
 # INPUT_LOG_FILE = "/Users/juanmateo/Desktop/Security-Projects/Security-Projects/dummy_logs/auth.log"
 
 script_dir = Path(__file__).resolve().parent
-log_file_path = script_dir / "dummy_logs" / "auth.log"
+log_file_path = script_dir / "Practice_logs" / "auth.log"
 
 failed_attempts_user = {}
 failed_attempts_ip = {}
@@ -17,7 +17,7 @@ failed_attempts = []
 with log_file_path.open("r") as file:
     for line in file:
         if "Failed password" in line:
-            # Extract the user namees
+            # Extract the user names
             match_user = re.search(r"(?<=user\s)(\S+)", line)
             if match_user:
                 user = match_user.group(0)
