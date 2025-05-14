@@ -11,6 +11,8 @@ This guide serves as a practical reference for Python's most common functions an
         - `read()`: Reads the content of a file.
         - `write()`: Writes data to a file.
 
+
+
 ### String Manipulation
 - **Syntax**: `.upper()`, `.lower()`, `.replace()`, `.split()`, `.join()`
     - **Usage**:
@@ -20,12 +22,16 @@ This guide serves as a practical reference for Python's most common functions an
         - `.split()`: Splits a string into a list based on a delimiter.
         - `.join()`: Joins elements of a list into a single string with a specified delimiter.
 
+
+
 ### Iteration & Comprehensions
 - **Syntax**: `for`, `while`, `[expression for item in iterable]`
     - **Usage**:
         - `for`: Iterates over items in a sequence (e.g., list, tuple).
         - `while`: Repeats a block of code while a condition is true.
         - `[expression for item in iterable]`: Creates a new list by applying an expression to each item in an iterable.
+
+
 
 ### Built-ins & Data Structures
 - **Syntax**: `len()`, `sorted()`, `dict()`, `list()`, `set()`, `tuple()`
@@ -37,6 +43,8 @@ This guide serves as a practical reference for Python's most common functions an
         - `set()`: Creates a set (unique elements).
         - `tuple()`: Creates a tuple (immutable sequence).
 
+
+
 ### Regex Basics
 - **Syntax**: `re.search()`, `re.match()`, `re.findall()`, `re.sub()`
     - **Usage**:
@@ -45,6 +53,8 @@ This guide serves as a practical reference for Python's most common functions an
         - `re.findall()`: Finds all occurrences of a pattern in a string.
         - `re.sub()`: Replaces occurrences of a pattern with a specified string.
 
+
+
 ### Error Handling & Debugging
 - **Syntax**: `try`, `except`, `finally`, `raise`
     - **Usage**:
@@ -52,6 +62,8 @@ This guide serves as a practical reference for Python's most common functions an
         - `except`: Handles exceptions that occur in the `try` block.
         - `finally`: Executes code regardless of whether an exception occurred.
         - `raise`: Manually raises an exception.
+
+
 
 ## 🧠 Tip for Learners
 
