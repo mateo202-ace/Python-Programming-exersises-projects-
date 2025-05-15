@@ -4,8 +4,10 @@
 - **Commonly used for**: Accessing system-specific parameters and functions, like command-line arguments or exiting the program.
 
 - **Purpose**: Provides access to system-specific parameters and functions.
-    - `sys.exit()`: Exits the program with an optional exit status.
-    - `sys.argv`: Provides a list of command-line arguments passed to the script.
+    - `sys.exit()`: Stops the program from running, optionally with a status code.
+    - `sys.argv`: A list that holds the command-line arguments given to the script.
+    - `sys.path`: A list of locations Python looks in to find modules.
+    - `sys.stderr`: Used to show error messages, like a special error log.
 
 
 
@@ -16,6 +18,13 @@
     - `os.getcwd()`: Returns the current working directory.
     - `os.listdir()`: Lists all files and directories in the specified path.
     - `os.environ.get()`: Retrieves the value of an environment variable.
+    - `os.open()`: Opens a file and returns a file descriptor.
+    - `os.close()`: Closes a file descriptor.
+    - `os.remove()`: Deletes a file from the filesystem.
+    - `os.getpid()`: Returns the process ID of the current process.
+    - `os.system()`: Executes a system command in the shell.
+    - `with os.scandir() as entries`: Opens a directory for iteration using a context manager.
+    - `with open('file.txt', 'r') as file`: Opens a file safely using a context manager.
 
 
 
@@ -26,6 +35,10 @@
     - `re.match()`: Matches a pattern at the beginning of a string.
     - `re.search()`: Searches for a pattern anywhere in the string.
     - `re.sub()`: Replaces occurrences of a pattern with a specified string.
+    - `re.findall()`: Finds all occurrences of a pattern in a string.
+    - `re.split()`: Splits a string by the occurrences of a pattern.
+    - `re.compile()`: Compiles a regular expression pattern for reuse.
+    - `re.escape()`: Escapes special characters in a string to treat them as literals.
 
 
 
@@ -35,7 +48,11 @@
 
 - **Purpose**: Provides information on system utilization (CPU, memory, etc.).
     - `psutil.cpu_percent()`: Returns the CPU usage percentage.
-    - `psutil.virtual_memory()`: Provides details about system memory usage.
+    - `psutil.disk_usage()`: Provides disk usage statistics.
+    - `psutil.net_io_counters()`: Returns network I/O statistics.
+    - `psutil.process_iter()`: Iterates over all running processes.
+    - `psutil.sensors_temperatures()`: Retrieves hardware temperature sensors data.
+    - `psutil.boot_time()`: Returns the system boot time as a timestamp.
 
 
 
@@ -68,6 +85,10 @@
     - `socket.socket()`: Creates a new socket object.
     - `socket.bind()`: Binds the socket to an address and port.
     - `socket.listen()`: Listens for incoming connections.
+    - `socket.connect()`: Connects the socket to a remote address.
+    - `socket.send()`: Sends data through the socket.
+    - `socket.recv()`: Receives data from the socket.
+    - `socket.close()`: Closes the socket connection.
 
 
 
@@ -78,6 +99,10 @@
 - **Purpose**: A web scraping framework for extracting data from websites.
     - `scrapy.Request()`: Creates a request object for a URL.
     - `scrapy.Spider`: Defines a spider for crawling and scraping data.
+    - `scrapy.Item`: Defines a container for scraped data.
+    - `scrapy.Field`: Specifies fields for an item.
+    - `scrapy.crawler.CrawlerProcess`: Runs a Scrapy spider programmatically.
+    - `scrapy.settings.Settings`: Configures Scrapy settings.
 
 
 
@@ -104,106 +129,108 @@
 
 
 
+### NumPy
+- **Commonly used for**: Numerical computations and array manipulations.
 
-
-
-
-
-## 1. NumPy
-- **Commonly Used Modules/Functions**:
-    - `numpy.array`: Create arrays.
-    - `numpy.mean`: Compute the mean of an array.
-    - `numpy.linspace`: Generate evenly spaced numbers over a range.
+- **Purpose**: Provides support for large, multi-dimensional arrays and matrices, along with a collection of mathematical functions to operate on them.
+    - `numpy.array`: Creates arrays.
+    - `numpy.mean`: Computes the mean of an array.
+    - `numpy.linspace`: Generates evenly spaced numbers over a range.
 - **Example**:
-        ```python
-        import numpy as np
-        arr = np.array([1, 2, 3])
-        print(arr.mean())  # Output: 2.0
-        ```
+    ```python
+    import numpy as np
+    arr = np.array([1, 2, 3])
+    print(arr.mean())  # Output: 2.0
+    ```
 
-## 2. Pandas
-- **Commonly Used Modules/Functions**:
-    - `pandas.DataFrame`: Create and manipulate tabular data.
-    - `pandas.read_csv`: Read data from CSV files.
-    - `pandas.groupby`: Group data for aggregation.
+### Pandas
+- **Commonly used for**: Data manipulation and analysis.
+
+- **Purpose**: Provides data structures and functions for working with structured data like tables.
+    - `pandas.DataFrame`: Creates and manipulates tabular data.
+    - `pandas.read_csv`: Reads data from CSV files.
+    - `pandas.groupby`: Groups data for aggregation.
 - **Example**:
-        ```python
-        import pandas as pd
-        data = {'Name': ['Alice', 'Bob'], 'Age': [25, 30]}
-        df = pd.DataFrame(data)
-        print(df)
-        ```
+    ```python
+    import pandas as pd
+    data = {'Name': ['Alice', 'Bob'], 'Age': [25, 30]}
+    df = pd.DataFrame(data)
+    print(df)
+    ```
 
-## 3. Matplotlib
-- **Commonly Used Modules/Functions**:
-    - `matplotlib.pyplot.plot`: Plot data points.
-    - `matplotlib.pyplot.show`: Display the plot.
-    - `matplotlib.pyplot.hist`: Create histograms.
+### Matplotlib
+- **Commonly used for**: Data visualization and plotting.
+
+- **Purpose**: Provides tools for creating static, animated, and interactive visualizations in Python.
+    - `matplotlib.pyplot.plot`: Plots data points.
+    - `matplotlib.pyplot.show`: Displays the plot.
+    - `matplotlib.pyplot.hist`: Creates histograms.
 - **Example**:
-        ```python
-        import matplotlib.pyplot as plt
-        plt.plot([1, 2, 3], [4, 5, 6])
-        plt.show()
-        ```
+    ```python
+    import matplotlib.pyplot as plt
+    plt.plot([1, 2, 3], [4, 5, 6])
+    plt.show()
+    ```
 
-## 4. Requests
-- **Commonly Used Modules/Functions**:
-    - `requests.get`: Perform GET requests.
-    - `requests.post`: Perform POST requests.
-    - `requests.json`: Parse JSON responses.
+### Requests
+- **Commonly used for**: Sending HTTP requests and handling responses.
+
+- **Purpose**: Simplifies HTTP requests in Python.
+    - `requests.get`: Sends a GET request to a URL.
+    - `requests.post`: Sends a POST request to a URL.
+    - `requests.json`: Parses JSON responses.
 - **Example**:
-        ```python
-        import requests
-        response = requests.get('https://api.github.com')
-        print(response.status_code)
-        ```
+    ```python
+    import requests
+    response = requests.get('https://api.github.com')
+    print(response.status_code)
+    ```
 
-## 5. Flask
-- **Commonly Used Modules/Functions**:
-    - `Flask`: Create a Flask application.
-    - `@app.route`: Define routes for the application.
-    - `app.run`: Run the Flask server.
+### Flask
+- **Commonly used for**: Building web applications and APIs.
+
+- **Purpose**: A lightweight web framework for creating web applications in Python.
+    - `Flask`: Creates a Flask application.
+    - `@app.route`: Defines routes for the application.
+    - `app.run`: Runs the Flask server.
 - **Example**:
-        ```python
-        from flask import Flask
-        app = Flask(__name__)
-        
-        @app.route('/')
-        def home():
-                return "Hello, Flask!"
-        
-        if __name__ == '__main__':
-                app.run()
-        ```
+    ```python
+    from flask import Flask
+    app = Flask(__name__)
+    
+    @app.route('/')
+    def home():
+        return "Hello, Flask!"
+    
+    if __name__ == '__main__':
+        app.run()
+    ```
 
-## 6. TensorFlow
-- **Commonly Used Modules/Functions**:
-    - `tensorflow.constant`: Create constant tensors.
-    - `tensorflow.keras`: Build and train machine learning models.
-    - `tensorflow.Variable`: Define trainable variables.
+### TensorFlow
+- **Commonly used for**: Machine learning and deep learning.
+
+- **Purpose**: Provides tools for building and training machine learning models.
+    - `tensorflow.constant`: Creates constant tensors.
+    - `tensorflow.keras`: Builds and trains machine learning models.
+    - `tensorflow.Variable`: Defines trainable variables.
 - **Example**:
-        ```python
-        import tensorflow as tf
-        x = tf.constant(5)
-        y = tf.constant(6)
-        print(x + y)  # Output: tf.Tensor(11, shape=(), dtype=int32)
-        ```
+    ```python
+    import tensorflow as tf
+    x = tf.constant(5)
+    y = tf.constant(6)
+    print(x + y)  # Output: tf.Tensor(11, shape=(), dtype=int32)
+    ```
 
-## 7. BeautifulSoup
-- **Commonly Used Modules/Functions**:
-    - `BeautifulSoup`: Parse HTML or XML documents.
-    - `.find`: Find the first matching tag.
-    - `.find_all`: Find all matching tags.
+### Scikit-learn
+- **Commonly used for**: Machine learning and data analysis.
+
+- **Purpose**: Provides simple and efficient tools for data mining and machine learning.
+    - `sklearn.linear_model.LinearRegression`: Performs linear regression.
+    - `sklearn.ensemble.RandomForestClassifier`: Implements a random forest classifier.
+    - `sklearn.model_selection.train_test_split`: Splits data into training and testing sets.
 - **Example**:
-        ```python
-        from bs4 import BeautifulSoup
-        html = "<html><body><h1>Hello</h1></body></html>"
-        soup = BeautifulSoup(html, 'html.parser')
-        print(soup.h1.text)  # Output: Hello
-        ```
-
-## 8. Scikit-learn
-- **Commonly Used Modules/Functions**:
-    - `sklearn.linear_model.LinearRegression`: Perform linear regression.
-    print(os.getcwd())  # Prints the current working directory
+    ```python
+    from sklearn.linear_model import LinearRegression
+    model = LinearRegression()
+    print(model)
     ```
